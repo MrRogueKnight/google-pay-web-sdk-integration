@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Pay API for Web 101</title>
+  <style>
+    /* Basic styling for the page */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    
+    /* Center the Google Pay button */
+    #gpay-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <h1>Google Pay Integration</h1>
+  <p>Click the button below to test Google Pay.</p>
+
+  <!-- Google Pay button container -->
+  <div id="gpay-container"></div>
+
+  <p>Transaction info and errors will be logged to the console.</p>
+
+  <!-- Load the main JavaScript file -->
+  <script type="text/javascript" src="main.js"></script>
+
+  <!-- Load the Google Pay API asynchronously -->
+  <script async src="https://pay.google.com/gp/p/js/pay.js" onload="onGooglePayLoaded()"></script>
+</body>
+
+</html>
