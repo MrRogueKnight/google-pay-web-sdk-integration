@@ -1,3 +1,5 @@
+
+---
 # google-pay-web-sdk-integration
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -18,7 +20,6 @@
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
-* [Contact](#contact)
 * [Acknowledgments](#acknowledgments)
 
 ---
@@ -127,3 +128,60 @@ Once the application is running in your browser:
 4.  **Observe Console Output:** After completing or cancelling the transaction, open your browser's developer console (`F12` or `Ctrl+Shift+I` / `Cmd+Option+I`). You will see detailed logs regarding the payment method used and the full transaction response object (or an error message if the transaction failed). This logging is crucial for understanding the data returned by Google Pay.
 
 ---
+
+## Project Structure
+
+```
+google-pay-web-sdk-integration/
+├── index.html        # The core HTML file containing the Google Pay button and JavaScript integration logic.
+├── style.css         # Basic CSS for minimal styling and layout.
+├── README.md         # This comprehensive README file.
+└── .gitignore        # Specifies files and directories to be ignored by Git.
+```
+
+---
+
+## Roadmap
+
+This project currently serves as a fundamental integration example. Future enhancements could include:
+
+* **Backend Integration:** Demonstrating how to send the payment token from the frontend to a backend server for processing.
+* **Error Handling:** More robust client-side error handling and user feedback.
+* **Dynamic Pricing:** Implementing dynamic product data and pricing for a more realistic scenario.
+* **Multiple Payment Methods:** Expanding to support other payment methods beyond basic card payments (e.g., tokenized cards, gift cards).
+* **User Interface Improvements:** Enhancing the visual appeal and user experience.
+
+---
+
+## Contributing
+
+Contributions are highly valued and welcome! Whether it's bug fixes, new features, or documentation improvements, your input helps make this project better for everyone.
+
+To contribute:
+
+1.  **Fork the repository.**
+2.  **Create your Feature Branch:** `git checkout -b feature/AmazingFeature`
+3.  **Commit your Changes:** `git commit -m 'feat: Add some AmazingFeature'` (using conventional commits is encouraged)
+4.  **Push to the Branch:** `git push origin feature/AmazingFeature`
+5.  **Open a Pull Request:** Describe your changes and their benefits clearly.
+
+Please ensure your code adheres to good practices and passes any existing linting/formatting checks.
+
+---
+
+## License
+
+Distributed under the MIT License. See the `LICENSE` file in the root of the repository for more information.
+
+---
+
+Project Link: [https://github.com/MrRogueKnight/google-pay-web-sdk-integration](https://github.com/MrRogueKnight/google-pay-web-sdk-integration)
+
+---
+
+## Acknowledgments
+
+* [Google Pay API for the Web Documentation](https://developers.google.com/pay/api/web)
+* [Shields.io](https://shields.io/) for the awesome badges.
+* [Choose an Open Source License](https://choosealicense.com/)
+```
