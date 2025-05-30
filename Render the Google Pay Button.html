@@ -1,0 +1,39 @@
+//=============================================================================
+// Render Google Pay Button
+//=============================================================================
+
+/**
+ * Initializes the Google Pay button.
+ * - Checks if Google Pay is available for the user's device.
+ * - If available, renders the Google Pay button inside the container.
+ */
+ 
+function onGooglePayLoaded() {
+  const paymentsClient = getGooglePaymentsClient();
+
+  paymentsClient.isReadyToPay({
+    apiVersion: 2,
+    apiVersionMinor: 0,
+    allowedPaymentMethods: baseGooglePayRequest.allowedPaymentMethods
+  })
+  .then(response => {
+    if (response.result) {
+      addGooglePayButton();
+    } else {
+      console.warn("Google Pay is not available on this device.");
+    }
+  })
+  .catch(error => console.error("Error checking Google Pay availability:", error));
+}
+
+/**
+ * Creates and adds the Google Pay button to the page.
+ */
+function addGooglePayButton() {
+  const paymentsClient = getGooglePaymentsClient();
+  const button = paymentsClient.createButton({
+    onClick: onGooglePaymentButtonClicked
+  });
+
+  document.getElementById(GPAY_BUTTON_CONTAINER_ID).appendChild(button);
+}
